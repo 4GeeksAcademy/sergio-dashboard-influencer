@@ -1,0 +1,346 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfluenceHub - Dashboard</title>
+    <meta name="description" content="Panel de control de rendimiento de campañas y redes sociales.">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-slate-100 text-slate-800">
+
+    <div class="min-h-screen lg:flex">
+
+        <!-- Sidebar -->
+        <aside class="bg-slate-900 text-white p-5 lg:w-64 lg:min-h-screen">
+            <h1 class="text-2xl font-bold mb-6">InfluenceHub</h1>
+
+            <nav class="flex flex-wrap gap-2 lg:flex-col">
+                <a href="#resumen" class="rounded-lg bg-violet-600 px-4 py-3">Resumen</a>
+                <a href="#plataformas" class="rounded-lg px-4 py-3 hover:bg-slate-700">Plataformas</a>
+                <a href="#productos" class="rounded-lg px-4 py-3 hover:bg-slate-700">Productos</a>
+                <a href="#campanas" class="rounded-lg px-4 py-3 hover:bg-slate-700">Campañas</a>
+            </nav>
+
+            <div class="hidden lg:block mt-12 border-t border-slate-700 pt-5">
+                <p class="text-sm text-slate-400">Cuenta activa</p>
+                <p class="font-semibold mt-1">Adriana López</p>
+                <p class="text-xs text-slate-400">Influencer</p>
+            </div>
+        </aside>
+
+        <!-- Main content -->
+        <main class="flex-1 min-w-0 p-4 sm:p-6 lg:p-8">
+
+            <!-- Header -->
+            <header class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mb-8">
+                <div>
+                    <p class="text-sm text-slate-500">Panel de control / Resumen</p>
+                    <h2 class="text-2xl sm:text-3xl font-bold mt-1">Dashboard</h2>
+                    <p class="text-slate-500 mt-1">Resumen del rendimiento de tus campañas.</p>
+                </div>
+
+                <div class="bg-white rounded-lg px-4 py-3 shadow-sm text-sm">
+                    Periodo: <strong>Últimos 30 días</strong>
+                </div>
+            </header>
+
+            <!-- KPIs -->
+            <section id="resumen" class="mb-10">
+                <h3 class="text-xl font-bold mb-4">Indicadores principales</h3>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+
+                    <article class="bg-white rounded-xl p-5 shadow-sm">
+                        <p class="text-sm text-slate-500">Comisiones totales</p>
+                        <p class="text-3xl font-bold mt-2">2.450 €</p>
+                        <p class="text-sm text-green-600 mt-2">+12,5 % respecto al mes anterior</p>
+                    </article>
+
+                    <article class="bg-white rounded-xl p-5 shadow-sm">
+                        <p class="text-sm text-slate-500">Ventas totales</p>
+                        <p class="text-3xl font-bold mt-2">186</p>
+                        <p class="text-sm text-green-600 mt-2">+8,2 % respecto al mes anterior</p>
+                    </article>
+
+                    <article class="bg-white rounded-xl p-5 shadow-sm">
+                        <p class="text-sm text-slate-500">Tasa de conversión</p>
+                        <p class="text-3xl font-bold mt-2">4,8 %</p>
+                        <p class="text-sm text-green-600 mt-2">+1,4 % respecto al mes anterior</p>
+                    </article>
+
+                    <article class="bg-white rounded-xl p-5 shadow-sm">
+                        <p class="text-sm text-slate-500">Engagement medio</p>
+                        <p class="text-3xl font-bold mt-2">6,2 %</p>
+                        <p class="text-sm text-red-500 mt-2">-0,5 % respecto al mes anterior</p>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- Drivers -->
+            <section class="mb-10">
+                <h3 class="text-xl font-bold mb-4">Análisis de rendimiento</h3>
+
+                <div class="grid grid-cols-1 xl:grid-cols-2 gap-4">
+
+                    <!-- Platforms -->
+                    <article id="plataformas" class="bg-white rounded-xl p-5 shadow-sm">
+                        <h4 class="font-bold text-lg mb-5">Rendimiento por plataforma</h4>
+
+                        <div class="space-y-5">
+
+                            <div>
+                                <div class="flex justify-between text-sm mb-2">
+                                    <span>Instagram</span>
+                                    <strong>75 %</strong>
+                                </div>
+                                <div class="h-3 bg-slate-100 rounded-full">
+                                    <div class="h-3 w-3/4 bg-violet-600 rounded-full"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between text-sm mb-2">
+                                    <span>TikTok</span>
+                                    <strong>60 %</strong>
+                                </div>
+                                <div class="h-3 bg-slate-100 rounded-full">
+                                    <div class="h-3 w-3/5 bg-pink-500 rounded-full"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between text-sm mb-2">
+                                    <span>YouTube</span>
+                                    <strong>45 %</strong>
+                                </div>
+                                <div class="h-3 bg-slate-100 rounded-full">
+                                    <div class="h-3 w-[45%] bg-red-500 rounded-full"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <!-- Products -->
+                    <article id="productos" class="bg-white rounded-xl p-5 shadow-sm">
+                        <h4 class="font-bold text-lg mb-5">Ingresos por producto</h4>
+
+                        <div class="space-y-5">
+
+                            <div>
+                                <div class="flex justify-between text-sm mb-2">
+                                    <span>Producto A - 50 €</span>
+                                    <strong>900 €</strong>
+                                </div>
+                                <div class="h-3 bg-slate-100 rounded-full">
+                                    <div class="h-3 w-3/5 bg-violet-600 rounded-full"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between text-sm mb-2">
+                                    <span>Producto B - 120 €</span>
+                                    <strong>1.200 €</strong>
+                                </div>
+                                <div class="h-3 bg-slate-100 rounded-full">
+                                    <div class="h-3 w-4/5 bg-violet-600 rounded-full"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between text-sm mb-2">
+                                    <span>Producto C - 80 €</span>
+                                    <strong>350 €</strong>
+                                </div>
+                                <div class="h-3 bg-slate-100 rounded-full">
+                                    <div class="h-3 w-[25%] bg-violet-600 rounded-full"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <!-- Engagement -->
+                    <article class="bg-white rounded-xl p-5 shadow-sm xl:col-span-2">
+                        <h4 class="font-bold text-lg mb-4">Actividad y engagement</h4>
+
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <div class="bg-slate-50 rounded-lg p-4">
+                                <p class="text-sm text-slate-500">Publicaciones</p>
+                                <p class="text-2xl font-bold mt-1">42</p>
+                            </div>
+
+                            <div class="bg-slate-50 rounded-lg p-4">
+                                <p class="text-sm text-slate-500">Me gusta</p>
+                                <p class="text-2xl font-bold mt-1">18.5K</p>
+                            </div>
+
+                            <div class="bg-slate-50 rounded-lg p-4">
+                                <p class="text-sm text-slate-500">Comentarios</p>
+                                <p class="text-2xl font-bold mt-1">2.340</p>
+                            </div>
+
+                            <div class="bg-slate-50 rounded-lg p-4">
+                                <p class="text-sm text-slate-500">Compartidos</p>
+                                <p class="text-2xl font-bold mt-1">1.820</p>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- Operational details -->
+            <section class="mb-10">
+                <h3 class="text-xl font-bold mb-4">Detalles operacionales</h3>
+
+                <div class="grid grid-cols-1 xl:grid-cols-2 gap-4">
+
+                    <!-- Product table -->
+                    <article class="bg-white rounded-xl p-5 shadow-sm">
+                        <h4 class="font-bold text-lg mb-4">Resumen de productos</h4>
+
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-sm text-left">
+                                <thead class="text-slate-500 border-b">
+                                    <tr>
+                                        <th class="py-3 pr-3">Producto</th>
+                                        <th class="py-3 pr-3">Ventas</th>
+                                        <th class="py-3 pr-3">Comisión</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr class="border-b">
+                                        <td class="py-3 pr-3 font-medium">Producto A</td>
+                                        <td class="py-3 pr-3">60</td>
+                                        <td class="py-3 pr-3">450 €</td>
+                                    </tr>
+
+                                    <tr class="border-b">
+                                        <td class="py-3 pr-3 font-medium">Producto B</td>
+                                        <td class="py-3 pr-3">67</td>
+                                        <td class="py-3 pr-3">1.206 €</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="py-3 pr-3 font-medium">Producto C</td>
+                                        <td class="py-3 pr-3">59</td>
+                                        <td class="py-3 pr-3">708 €</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </article>
+
+                    <!-- Platform table -->
+                    <article class="bg-white rounded-xl p-5 shadow-sm">
+                        <h4 class="font-bold text-lg mb-4">Resumen de plataformas</h4>
+
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-sm text-left">
+                                <thead class="text-slate-500 border-b">
+                                    <tr>
+                                        <th class="py-3 pr-3">Plataforma</th>
+                                        <th class="py-3 pr-3">Alcance</th>
+                                        <th class="py-3 pr-3">Ventas</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr class="border-b">
+                                        <td class="py-3 pr-3 font-medium">Instagram</td>
+                                        <td class="py-3 pr-3">45.2K</td>
+                                        <td class="py-3 pr-3">95</td>
+                                    </tr>
+
+                                    <tr class="border-b">
+                                        <td class="py-3 pr-3 font-medium">TikTok</td>
+                                        <td class="py-3 pr-3">32.8K</td>
+                                        <td class="py-3 pr-3">61</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="py-3 pr-3 font-medium">YouTube</td>
+                                        <td class="py-3 pr-3">18.4K</td>
+                                        <td class="py-3 pr-3">30</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- Campaigns and alerts -->
+            <section id="campanas" class="mb-8">
+                <div class="grid grid-cols-1 xl:grid-cols-2 gap-4">
+
+                    <article class="bg-white rounded-xl p-5 shadow-sm">
+                        <h4 class="font-bold text-lg mb-4">Campañas recientes</h4>
+
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center border-b pb-3">
+                                <div>
+                                    <p class="font-medium">Lanzamiento Producto B</p>
+                                    <p class="text-xs text-slate-500">10 - 20 noviembre</p>
+                                </div>
+                                <span class="text-green-600 text-sm font-semibold">Completada</span>
+                            </div>
+
+                            <div class="flex justify-between items-center border-b pb-3">
+                                <div>
+                                    <p class="font-medium">Promoción Producto A</p>
+                                    <p class="text-xs text-slate-500">15 - 30 noviembre</p>
+                                </div>
+                                <span class="text-blue-600 text-sm font-semibold">Activa</span>
+                            </div>
+
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <p class="font-medium">Campaña Producto C</p>
+                                    <p class="text-xs text-slate-500">Próximamente</p>
+                                </div>
+                                <span class="text-slate-500 text-sm font-semibold">Pendiente</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="bg-white rounded-xl p-5 shadow-sm">
+                        <h4 class="font-bold text-lg mb-4">Alertas y oportunidades</h4>
+
+                        <div class="space-y-3">
+                            <div class="bg-green-50 border-l-4 border-green-500 p-3 rounded">
+                                <p class="font-semibold text-green-800 text-sm">Buen rendimiento</p>
+                                <p class="text-sm text-green-700">Instagram ha aumentado sus ventas un 12 %.</p>
+                            </div>
+
+                            <div class="bg-yellow-50 border-l-4 border-yellow-500 p-3 rounded">
+                                <p class="font-semibold text-yellow-800 text-sm">Atención</p>
+                                <p class="text-sm text-yellow-700">El engagement de YouTube ha disminuido.</p>
+                            </div>
+
+                            <div class="bg-violet-50 border-l-4 border-violet-500 p-3 rounded">
+                                <p class="font-semibold text-violet-800 text-sm">Oportunidad</p>
+                                <p class="text-sm text-violet-700">El Producto B genera más comisiones.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <footer class="text-center text-sm text-slate-400 py-4 border-t">
+                InfluenceHub - Dashboard de rendimiento · 2026
+            </footer>
+
+        </main>
+    </div>
+
+</body>
+</html>
